@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Cart from "../cart/cart";
 import MenuItem from "./menuItem";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 import data from "../../data/db.json"
 
 const MenuList = () => {
@@ -10,7 +10,7 @@ const MenuList = () => {
   const [cartItems, setCartItems] = useState([]);
   const [addedItemsID, setIsAddedItemsID] = useState([]);
   const [cartCount, setCartCount] = useState({});
-  console.log("here", cartCount)
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const addToCart = (item) => {
     console.log(`Added ${item.name} to cart.`);
@@ -26,7 +26,7 @@ const MenuList = () => {
   const incrementItem = (itemId) => {
     const item = menuItems.find((item) => item.id === itemId);
 
-    if(cartCount[itemId >= item.quantity]) return;
+    if(cartCount[itemId] >= item.quantity) return;
     setCartCount({
       ...cartCount,
       [itemId]: (cartCount[itemId] || 0) + 1,
@@ -49,6 +49,30 @@ const MenuList = () => {
       });
     }
   };
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cartItems");
+    const storedCounts = localStorage.getItem("cartCount");
+    const storedAddedIDs = localStorage.getItem("addedItemsID");
+
+    if(storedCart) {
+      setCartItems(JSON.parse(storedCart));
+    }
+    if(storedCounts) {
+      setCartCount(JSON.parse(storedCounts));
+    }
+    if(storedAddedIDs) {
+      setIsAddedItemsID(JSON.parse(storedAddedIDs));
+    }
+    setIsLoaded(true)
+  }, []);
+
+  useEffect(() => {   
+    if(!isLoaded) return;
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    localStorage.setItem("cartCount", JSON.stringify(cartCount));
+    localStorage.setItem("addedItemsID", JSON.stringify(addedItemsID));
+  }, [cartItems, cartCount, addedItemsID]);
 
   return (
     <Container fluid className="mt-5 menuListContainer py-4">
