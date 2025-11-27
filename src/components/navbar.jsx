@@ -1,5 +1,4 @@
 import {
-  Button,
   Col,
   Container,
   Form,
@@ -9,13 +8,17 @@ import {
 } from "react-bootstrap";
 import logo from "../assets/bite-lite-logo.png";
 import { Search } from "lucide-react";
+import { SearchContext } from "../context/searchContext";
+import { useContext } from "react";
 
 const NavbarSection = () => {
+  const {updateSearchQuery} = useContext(SearchContext);
+
   return (
     <Navbar expand="lg">
       <Container fluid className="px-4 py-2 fixed-top navbarContainer shadow-sm bg-white">
         <Row className="w-100 align-items-center g-2">
-        <Col xs={3} sm={2} md={2}>
+        <Col xs={6} sm={2} md={2}>
             <Navbar.Brand href="/" className="fw-bold d-flex align-items-center gap-2">
               <Image
                 src={logo}
@@ -26,7 +29,7 @@ const NavbarSection = () => {
               /> BiteLite
             </Navbar.Brand>
           </Col>
-          <Col xs={9} sm={10} md={10}>
+          <Col xs={6} sm={10} md={10}>
             <Form className="w-100">
               <div style={{ position: "relative" }}>
                 <Search
@@ -43,6 +46,7 @@ const NavbarSection = () => {
                   type="text"
                   placeholder="Search"
                   style={{ paddingLeft: "40px" }}
+                  onChange={(e) => updateSearchQuery(e.target.value)}
                 />
               </div>
             </Form>

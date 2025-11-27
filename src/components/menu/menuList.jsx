@@ -1,16 +1,25 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import Cart from "../cart/cart";
 import MenuItem from "./menuItem";
-import { use, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import data from "../../data/db.json"
+import { SearchContext } from "../../context/searchContext";
+import { CircleAlert } from "lucide-react";
 
 const MenuList = () => {
-  const menuItems = data
+  const menuItems = data;
 
   const [cartItems, setCartItems] = useState([]);
   const [addedItemsID, setIsAddedItemsID] = useState([]);
   const [cartCount, setCartCount] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
+  const {searchQuery} = useContext(SearchContext);
+
+  const filteredMenuItems = menuItems.filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  let newMenuData = searchQuery ? filteredMenuItems : menuItems;
 
   const addToCart = (item) => {
     console.log(`Added ${item.name} to cart.`);
@@ -79,7 +88,15 @@ const MenuList = () => {
       <Row>
         <Col md={9} xs={12} className="menuItemCol">
           <Row>
-            {menuItems.map((item) => (
+            {newMenuData.length === 0 && (
+              <div className="d-flex flex-column align-items-center justify-content-center w-100" style={{height: "60vh"}}>
+                 <CircleAlert size={100} className="mb-3" stroke="#F39850" />
+                 <p className="fw-bold fs-5">No items match your search.</p>
+                 <Button style={{ backgroundColor: "#F39850", border: "none" }}  onClick={() => window.location.reload()}> All Products </Button>
+              </div>
+             
+            )}
+            {newMenuData.map((item) => (
               <Col key={item.id} xs={12} sm={6} md={6} lg={3} className="d-flex mb-4">
                 <MenuItem
                   key={item.id}
