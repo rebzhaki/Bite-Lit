@@ -31,7 +31,7 @@ const CartButtons = ({
   }
 
   return (
-    <div className="d-flex align-items-center gap-2">
+    <div className="d-flex align-items-center gap-2 justify-content-center" >
       <div 
         style={{ 
           backgroundColor: "white", 

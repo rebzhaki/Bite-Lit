@@ -35,7 +35,7 @@ const MenuItem = ({
           <Col className="text-end">
             {item && isAddedToCart ? (
               <div>
-                <CartButtons
+                <CartButtons className=""
                   quantity={quantity}
                   maxValue={stock}
                   onIncrement={onIncrement}
