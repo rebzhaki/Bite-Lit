@@ -6,7 +6,7 @@ import {
   Navbar,
   Row,
 } from "react-bootstrap";
-import logo from "../assets/bite-lite-logo.png";
+import logo from "/bite-lite-logo.png";
 import { Search } from "lucide-react";
 import { SearchContext } from "../context/searchContext";
 import { useContext } from "react";

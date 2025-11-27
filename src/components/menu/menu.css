@@ -30,10 +30,22 @@
     top: 20px;
     align-self: flex-start;
 }
+.cartColMobile{
+    display: none;
+}
 @media screen and (max-width: 768px) {
     .menuItemCard {
         margin-bottom: 20px;
         margin: 10px;
+    }
+    .cartCol {
+        display: none;
+    }
+    .cartColMobile{
+        display: block;
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
     }
     
 }

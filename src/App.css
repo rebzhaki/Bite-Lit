@@ -7,6 +7,33 @@
   width: 100%;
   margin: 0;
 }
+.loadingScreen {
+  background-color: #ffffff;
+}
+.loadingScreen img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: bounceIn 2s infinite;
+}
+
+@keyframes bounceIn {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .loadingScreen img {
+    width: 120px;
+  }
+}
 
 
 

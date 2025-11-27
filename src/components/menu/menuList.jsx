@@ -15,6 +15,7 @@ const MenuList = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const {searchQuery} = useContext(SearchContext);
 
+
   const filteredMenuItems = menuItems.filter((item) =>
     item.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -59,10 +60,11 @@ const MenuList = () => {
     }
   };
 
+
   useEffect(() => {
-    const storedCart = localStorage.getItem("cartItems");
-    const storedCounts = localStorage.getItem("cartCount");
-    const storedAddedIDs = localStorage.getItem("addedItemsID");
+    const storedCart = sessionStorage.getItem("cartItems");
+    const storedCounts = sessionStorage.getItem("cartCount");
+    const storedAddedIDs = sessionStorage.getItem("addedItemsID");
 
     if(storedCart) {
       setCartItems(JSON.parse(storedCart));
@@ -78,9 +80,9 @@ const MenuList = () => {
 
   useEffect(() => {   
     if(!isLoaded) return;
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    localStorage.setItem("cartCount", JSON.stringify(cartCount));
-    localStorage.setItem("addedItemsID", JSON.stringify(addedItemsID));
+    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+    sessionStorage.setItem("cartCount", JSON.stringify(cartCount));
+    sessionStorage.setItem("addedItemsID", JSON.stringify(addedItemsID));
   }, [cartItems, cartCount, addedItemsID]);
 
   return (
@@ -113,7 +115,10 @@ const MenuList = () => {
           </Row>
         </Col>
         <Col md={3} className="cartCol">
-          <Cart cartItems={cartItems}  quantities={cartCount} onIncrement={incrementItem} onDecrement={decrementItem} />
+          <Cart cartItems={cartItems} quantities={cartCount} onIncrement={incrementItem} onDecrement={decrementItem} />
+        </Col>
+        <Col md={3} className="cartColMobile">
+          <Cart cartItems={cartItems} quantities={cartCount} onIncrement={incrementItem} onDecrement={decrementItem} isMobile={true} />
         </Col>
       </Row>
     </Container>
