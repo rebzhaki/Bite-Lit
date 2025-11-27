@@ -60,7 +60,6 @@ const MenuList = () => {
     }
   };
 
-
   useEffect(() => {
     const storedCart = sessionStorage.getItem("cartItems");
     const storedCounts = sessionStorage.getItem("cartCount");
@@ -86,12 +85,12 @@ const MenuList = () => {
   }, [cartItems, cartCount, addedItemsID]);
 
   return (
-    <Container fluid className="mt-5 menuListContainer py-4">
+    <Container fluid className="mt-5 py-4">
       <Row>
         <Col md={9} xs={12} className="menuItemCol">
           <Row>
             {newMenuData.length === 0 && (
-              <div className="d-flex flex-column align-items-center justify-content-center w-100" style={{height: "60vh"}}>
+              <div className="d-flex flex-column align-items-center justify-content-center" style={{height: "60vh"}}>
                  <CircleAlert size={100} className="mb-3" stroke="#F39850" />
                  <p className="fw-bold fs-5">No items match your search.</p>
                  <Button style={{ backgroundColor: "#F39850", border: "none" }}  onClick={() => window.location.reload()}> All Products </Button>
@@ -115,7 +114,9 @@ const MenuList = () => {
           </Row>
         </Col>
         <Col md={3} className="cartCol">
+            <div className="cartWrapper">
           <Cart cartItems={cartItems} quantities={cartCount} onIncrement={incrementItem} onDecrement={decrementItem} />
+            </div>
         </Col>
         <Col md={3} className="cartColMobile">
           <Cart cartItems={cartItems} quantities={cartCount} onIncrement={incrementItem} onDecrement={decrementItem} isMobile={true} />

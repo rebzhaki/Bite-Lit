@@ -12,9 +12,9 @@ const Cart = ({ cartItems, quantities, onIncrement, onDecrement, isMobile }) => 
     console.log("Cart items updated:");
   }, [cartItems, quantities]);
   return (
-    <div className="position-sticky" style={{ top: "40px" }}>
+    <div className="position-sticky" style={{ top: "40px"}}>
       {!isMobile && (
-        <Card className="p-1 pt-4 cartContainer shadow-sm mb-4">
+        <Card className="p-1 pt-4 cartContainer shadow-sm">
         <h4 className="text-center fw-bold">Order Summary</h4>
         <Card.Body
           style={{
@@ -40,7 +40,7 @@ const Cart = ({ cartItems, quantities, onIncrement, onDecrement, isMobile }) => 
         </Card.Body>
         <Card.Footer className="d-flex text-muted align-items-center justify-content-center">
           <Button
-            className="w-100 mb-2"
+            className="w-100 "
             style={{ backgroundColor: "#F39850", border: "none" }}
           >
             {cartItems.length > 0

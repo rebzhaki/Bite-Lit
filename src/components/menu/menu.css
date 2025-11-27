@@ -25,10 +25,14 @@
     display: none;
     width: 8px;
 }
-.cartCol{
+.cartCol {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+.cartWrapper{
     position: sticky;
-    top: 20px;
-    align-self: flex-start;
+    top: 100px;
 }
 .cartColMobile{
     display: none;
