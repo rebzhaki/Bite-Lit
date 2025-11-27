@@ -4,7 +4,6 @@ import {
   Container,
   Form,
   Image,
-  InputGroup,
   Navbar,
   Row,
 } from "react-bootstrap";
@@ -14,21 +13,21 @@ import { Search } from "lucide-react";
 const NavbarSection = () => {
   return (
     <Navbar expand="lg">
-      <Container fluid>
-        <Row className="w-100">
-          <Col xs="2">
-            <Navbar.Brand href="/">
+      <Container fluid className="px-4 py-2 fixed-top navbarContainer shadow-sm bg-white">
+        <Row className="w-100 align-items-center g-2">
+        <Col xs={3} sm={2} md={2}>
+            <Navbar.Brand href="/" className="fw-bold d-flex align-items-center gap-2">
               <Image
                 src={logo}
-                width="100"
-                height="100"
+                className="img-fluid"
+                style={{ maxWidth: "60px", height: "auto" }}
                 alt="BiteLite Logo"
                 roundedCircle
-              />
+              /> BiteLite
             </Navbar.Brand>
           </Col>
-          <Col className="d-flex align-items-center justify-content-end" xs="10">
-            <Form>
+          <Col xs={9} sm={10} md={10}>
+            <Form className="w-100">
               <div style={{ position: "relative" }}>
                 <Search
                   size={18}

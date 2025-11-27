@@ -6,6 +6,7 @@ adds and removes items from the cart and displays the cart total.
 ## Installation
 
 - Clone the Project
+ `https://github.com/rebzhaki/Bite-Lit.git`
 - Navigate to the application directory
  `cd bite-lite`
 - And run the command to install dependencies
@@ -15,3 +16,5 @@ adds and removes items from the cart and displays the cart total.
 
 ## Tech Stack
 ReactJs
+React Bootstrap
+CSS

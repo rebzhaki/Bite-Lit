@@ -13,7 +13,22 @@
 .shoppingCartIcon:hover{
     transform: scale(1.2);
     transition: transform 0.3s ease;
+}
 
+.menuItemCol{
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+}
+.menuItemCol::-webkit-scrollbar {
+    display: none;
+    width: 8px;
+}
+.cartCol{
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
 }
 @media screen and (max-width: 768px) {
     .menuItemCard {

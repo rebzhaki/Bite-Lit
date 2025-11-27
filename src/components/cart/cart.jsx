@@ -1,20 +1,52 @@
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import CartItem from "./cartItem";
+import { useEffect } from "react";
 
-const Cart = () => {
-  const cartItems = []; 
+const Cart = ({ cartItems, quantities, onIncrement, onDecrement }) => {
+  const total = cartItems.reduce((sum, item) => {
+    const count = quantities[item.id] || 0;
+    return sum + item.price * count;
+  }, 0);
+
+  useEffect(() => {
+    console.log("Cart items updated:", cartItems);
+  }, [cartItems, quantities]);
   return (
-    <div>
-      <Card style={{ width: "18rem" }} className="p-1 pt-4">
+    <div className="position-sticky" style={{ top: "40px" }}>
+      <Card className="p-1 pt-4 cartContainer shadow-sm mb-4">
         <h4 className="text-center fw-bold">Order Summary</h4>
-        {/* <Card.Img variant="top" src={item.img} height={300} width={300} /> */}
-        <Card.Body>
+        <Card.Body
+          style={{
+            overflowY: "auto",
+            maxHeight: "calc(100vh - 200px)",
+          }}
+        >
           {cartItems.length === 0 ? (
-            <p className="text-center">When you add items to the cart, they will appear here</p>
+            <p className="text-center">
+              When you add items to the cart, they will appear here
+            </p>
           ) : (
-            <CartItem />
+            cartItems.map((item) => (
+              <CartItem
+                key={item.id}
+                item={item}
+                count={quantities[item.id] || 0}
+                onDecrement={() => onDecrement(item.id)}
+                onIncrement={() => onIncrement(item.id)}
+              />
+            ))
           )}
         </Card.Body>
+        <Card.Footer className="d-flex text-muted align-items-center justify-content-center">
+          <Button
+            className="w-100 mb-2"
+            style={{ backgroundColor: "#F39850", border: "none" }}
+          >
+            {cartItems.length > 0
+              ? `Go To Checkout Ksh. ${total.toFixed(2)}`
+              : "Place Order"}
+          </Button>
+        </Card.Footer>
       </Card>
     </div>
   );
