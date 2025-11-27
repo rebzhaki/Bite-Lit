@@ -1,37 +1,78 @@
-
-import spaghetti from "../../assets/spaghetti-bolognese.jpg";
 import { Col, Container, Row } from "react-bootstrap";
 import Cart from "../cart/cart";
 import MenuItem from "./menuItem";
+import { useState } from "react";
+import data from "../../data/db.json"
 
 const MenuList = () => {
-  const menuItems = [
-    { id: 1, name: "Spaghetti Bolognese", price: 12.99, img: spaghetti, description: "Classic Italian pasta with rich meat sauce." },
-    { id: 2, name: "Chicken Caesar Salad", price: 10.99, img: spaghetti, description: "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing." },
-    { id: 3, name: "Margherita Pizza", price: 11.99, img: spaghetti, description: "Traditional pizza topped with fresh tomatoes, mozzarella, and basil." },
-    { id: 4, name: "Spaghetti Bolognese", price: 12.99, img: spaghetti, description: "Classic Italian pasta with rich meat sauce." },
-    { id: 5, name: "Chicken Caesar Salad", price: 10.99, img: spaghetti, description: "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing." },
-    { id: 6, name: "Margherita Pizza", price: 11.99, img: spaghetti, description: "Traditional pizza topped with fresh tomatoes, mozzarella, and basil." },
-  ];
+  const menuItems = data
+
+  const [cartItems, setCartItems] = useState([]);
+  const [addedItemsID, setIsAddedItemsID] = useState([]);
+  const [cartCount, setCartCount] = useState({});
+  console.log("here", cartCount)
+
+  const addToCart = (item) => {
+    console.log(`Added ${item.name} to cart.`);
+    if (addedItemsID.includes(item.id)) {
+      incrementItem(item.id);
+      return; 
+    }
+
+    setCartItems([...cartItems, item]);
+    setIsAddedItemsID([...addedItemsID, item.id]);
+    setCartCount({ ...cartCount, [item.id]: 1 });
+  }
+  const incrementItem = (itemId) => {
+    const item = menuItems.find((item) => item.id === itemId);
+
+    if(cartCount[itemId >= item.quantity]) return;
+    setCartCount({
+      ...cartCount,
+      [itemId]: (cartCount[itemId] || 0) + 1,
+    });
+  };
+
+  const decrementItem = (itemId) => {
+    if (!cartCount[itemId]) return;
+
+    const newCount = cartCount[itemId] - 1;
+    if (newCount === 0) {
+      setCartItems(cartItems.filter((item) => item.id !== itemId));
+      setIsAddedItemsID(addedItemsID.filter((id) => id !== itemId));
+      const { [itemId]: _, ...rest } = cartCount;
+      setCartCount(rest);
+    } else {
+      setCartCount({
+        ...cartCount,
+        [itemId]: newCount,
+      });
+    }
+  };
 
   return (
-    <Container fluid className="my-4 mt-5">
+    <Container fluid className="mt-5 menuListContainer py-4">
       <Row>
-        <Col md={10} xs={12}>
+        <Col md={9} xs={12} className="menuItemCol">
           <Row>
             {menuItems.map((item) => (
-              <Col key={item.id} xs={12} sm={6} lg={2} className="d-flex">
+              <Col key={item.id} xs={12} sm={6} md={6} lg={3} className="d-flex mb-4">
                 <MenuItem
                   key={item.id}
                   item={item}
-                  onClick={() => console.log(`Clicked on ${item.name}`)}
+                  stock={item.quantity}
+                  isAddedToCart={addedItemsID.includes(item.id)}
+                  quantity={cartCount[item.id] || 0}
+                  onAddToCart={() => addToCart(item)}
+                  onIncrement={() => incrementItem(item.id)}
+                  onDecrement={() => decrementItem(item.id)}
                 />
               </Col>
             ))}
           </Row>
         </Col>
-        <Col md={2}>
-          <Cart />
+        <Col md={3} className="cartCol">
+          <Cart cartItems={cartItems}  quantities={cartCount} onIncrement={incrementItem} onDecrement={decrementItem} />
         </Col>
       </Row>
     </Container>
