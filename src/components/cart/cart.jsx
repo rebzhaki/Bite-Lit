@@ -9,7 +9,7 @@ const Cart = ({ cartItems, quantities, onIncrement, onDecrement }) => {
   }, 0);
 
   useEffect(() => {
-    console.log("Cart items updated:", cartItems);
+    console.log("Cart items updated:");
   }, [cartItems, quantities]);
   return (
     <div className="position-sticky" style={{ top: "40px" }}>
