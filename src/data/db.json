@@ -1,30 +1,55 @@
 [
-    { "id": 1, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 2, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.", "rating": 4.5, "quantity": 10, "category": "Chicken" },
-    { "id": 3, "name": "Margherita Pizza", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.", "rating": 4.5, "quantity": 10, "category": "Pizza" },
-    { "id": 4, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 5, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.", "rating": 4.5, "quantity": 10, "category": "Chicken" },
-    { "id": 6, "name": "Margherita Pizza", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 7, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 8, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 9, "name": "Margherita Pizza", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.", "rating": 4.5, "quantity": 10, "category": "Pizza" },
-    { "id": 10, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 11, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 12, "name": "Margherita Pizza", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.", "rating": 4.5, "quantity": 10, "category": "Pizza" },
-    { "id": 13, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 14, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 15, "name": "Margherita Pizza", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 16, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 17, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 18, "name": "Margherita Pizza", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 19, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 20, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 21, "name": "Margherita Pizza", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 22, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 23, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 24, "name": "Margherita Pizza", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 25, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 26, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.", "rating": 4.5, "quantity": 10, "category": "Pasta" },
-    { "id": 27, "name": "Margherita Pizza", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Traditional pizza topped with fresh tomatoes, mozzarella, and basil.", "rating": 4.5, "quantity": 10 }
-  ]
-  
+  { "id": 1, "name": "Spaghetti Bolognese", "price": 12.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Classic Italian pasta with rich meat sauce.", "rating": 9.5, "quantity": 10, "category": "Pasta" },
+  { "id": 2, "name": "Chicken Caesar Salad", "price": 10.99, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Fresh romaine lettuce topped with grilled chicken and parmesan.", "rating": 8.2, "quantity": 12, "category": "Chicken" },
+  { "id": 3, "name": "Margherita Pizza", "price": 11.99, "img": "/images/Margherita-pizza.jpeg", "description": "Stone-baked pizza with basil, cheese, and fresh tomatoes.", "rating": 9.0, "quantity": 20, "category": "Pizza" },
+
+  { "id": 4, "name": "Creamy Alfredo Pasta", "price": 13.50, "img": "/images/spaghetti-bolognese.jpg", "description": "Rich and creamy alfredo sauce served over tender pasta.", "rating": 8.6, "quantity": 14, "category": "Pasta" },
+  { "id": 5, "name": "Grilled Chicken Salad", "price": 11.50, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Grilled chicken breast served on mixed greens with dressing.", "rating": 8.4, "quantity": 15, "category": "Chicken" },
+  { "id": 6, "name": "Four Cheese Pizza", "price": 14.99, "img": "/images/Margherita-pizza.jpeg", "description": "A blend of mozzarella, cheddar, parmesan, and gorgonzola.", "rating": 9.3, "quantity": 18, "category": "Pizza" },
+
+  { "id": 7, "name": "Pesto Spaghetti", "price": 12.50, "img": "/images/spaghetti-bolognese.jpg", "description": "Spaghetti tossed with fresh basil pesto and pine nuts.", "rating": 8.8, "quantity": 10, "category": "Pasta" },
+  { "id": 8, "name": "Chicken Garden Salad", "price": 9.99, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Light and refreshing salad with seasoned chicken strips.", "rating": 7.9, "quantity": 20, "category": "Chicken" },
+  { "id": 9, "name": "Pepperoni Pizza", "price": 13.99, "img": "/images/Margherita-pizza.jpeg", "description": "Classic pepperoni pizza with a crispy crust.", "rating": 9.1, "quantity": 25, "category": "Pizza" },
+
+  { "id": 10, "name": "Beef Lasagna", "price": 15.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Layered pasta with beef, cheese, and rich tomato sauce.", "rating": 9.4, "quantity": 10, "category": "Pasta" },
+  { "id": 11, "name": "Chicken Avocado Salad", "price": 12.20, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Creamy avocado slices paired with grilled chicken.", "rating": 8.7, "quantity": 10, "category": "Chicken" },
+  { "id": 12, "name": "BBQ Chicken Pizza", "price": 14.20, "img": "/images/Margherita-pizza.jpeg", "description": "Pizza topped with BBQ chicken, onions, and cheese.", "rating": 8.9, "quantity": 12, "category": "Pizza" },
+
+  { "id": 13, "name": "Tomato Basil Pasta", "price": 11.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Light pasta tossed with fresh basil and tomatoes.", "rating": 8.5, "quantity": 18, "category": "Pasta" },
+  { "id": 14, "name": "Chicken Greek Salad", "price": 10.50, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Healthy Greek-style salad with olives and chicken.", "rating": 8.1, "quantity": 17, "category": "Chicken" },
+  { "id": 15, "name": "Veggie Pizza", "price": 12.99, "img": "/images/Margherita-pizza.jpeg", "description": "Loaded with bell peppers, mushrooms, and olives.", "rating": 8.8, "quantity": 22, "category": "Pizza" },
+
+  { "id": 16, "name": "Carbonara Pasta", "price": 14.40, "img": "/images/spaghetti-bolognese.jpg", "description": "Creamy carbonara sauce with eggs, cheese, and bacon.", "rating": 9.0, "quantity": 15, "category": "Pasta" },
+  { "id": 17, "name": "Chicken Ranch Salad", "price": 10.20, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Fresh salad mixed with ranch dressing and chicken.", "rating": 7.8, "quantity": 10, "category": "Chicken" },
+  { "id": 18, "name": "Mushroom Pizza", "price": 13.50, "img": "/images/Margherita-pizza.jpeg", "description": "Pizza topped with fresh mushrooms and herbs.", "rating": 9.2, "quantity": 14, "category": "Pizza" },
+
+  { "id": 19, "name": "Arrabiata Pasta", "price": 12.10, "img": "/images/spaghetti-bolognese.jpg", "description": "Spicy tomato pasta with garlic and chili flakes.", "rating": 8.3, "quantity": 20, "category": "Pasta" },
+  { "id": 20, "name": "Chicken Walnut Salad", "price": 11.60, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Crunchy walnuts mixed with healthy grilled chicken salad.", "rating": 8.6, "quantity": 16, "category": "Chicken" },
+  { "id": 21, "name": "Hawaiian Pizza", "price": 13.99, "img": "/images/Margherita-pizza.jpeg", "description": "Sweet pineapple and ham on a cheesy pizza base.", "rating": 8.9, "quantity": 25, "category": "Pizza" },
+
+  { "id": 22, "name": "Spinach Alfredo Pasta", "price": 13.80, "img": "/images/spaghetti-bolognese.jpg", "description": "Creamy alfredo pasta with fresh spinach leaves.", "rating": 8.5, "quantity": 12, "category": "Pasta" },
+  { "id": 23, "name": "Chicken Mango Salad", "price": 12.30, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Tropical mango slices with tender chicken strips.", "rating": 8.9, "quantity": 14, "category": "Chicken" },
+  { "id": 24, "name": "Cheese Burst Pizza", "price": 15.50, "img": "/images/Margherita-pizza.jpeg", "description": "Rich cheesy pizza with a gooey cheese-filled crust.", "rating": 9.4, "quantity": 20, "category": "Pizza" },
+
+  { "id": 25, "name": "Garlic Butter Pasta", "price": 10.50, "img": "/images/spaghetti-bolognese.jpg", "description": "Simple yet flavorful garlic-infused pasta.", "rating": 8.0, "quantity": 18, "category": "Pasta" },
+  { "id": 26, "name": "Chicken Apple Salad", "price": 11.10, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Sweet apple slices mixed with grilled chicken.", "rating": 8.4, "quantity": 16, "category": "Chicken" },
+  { "id": 27, "name": "Meat Lovers Pizza", "price": 16.20, "img": "/images/Margherita-pizza.jpeg", "description": "Loaded with sausage, beef, ham, and pepperoni.", "rating": 9.6, "quantity": 15, "category": "Pizza" },
+
+  { "id": 28, "name": "Basil Tomato Pasta", "price": 11.80, "img": "/images/spaghetti-bolognese.jpg", "description": "Fresh basil leaves with a tangy tomato sauce.", "rating": 8.2, "quantity": 18, "category": "Pasta" },
+  { "id": 29, "name": "Chicken Cabbage Salad", "price": 9.80, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Healthy cabbage slaw with strips of chicken.", "rating": 7.7, "quantity": 22, "category": "Chicken" },
+  { "id": 30, "name": "Marinara Pizza", "price": 12.40, "img": "/images/Margherita-pizza.jpeg", "description": "Simple pizza with tomato sauce and herbs.", "rating": 8.1, "quantity": 25, "category": "Pizza" },
+
+  { "id": 31, "name": "Chicken Alfredo Pasta", "price": 14.99, "img": "/images/spaghetti-bolognese.jpg", "description": "Creamy alfredo pasta topped with tender chicken.", "rating": 9.0, "quantity": 15, "category": "Pasta" },
+  { "id": 32, "name": "Spicy Chicken Salad", "price": 11.40, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Salad with chili-seasoned chicken pieces.", "rating": 8.3, "quantity": 18, "category": "Chicken" },
+  { "id": 33, "name": "Spinach Pizza", "price": 13.10, "img": "/images/Margherita-pizza.jpeg", "description": "Pizza loaded with spinach and mozzarella.", "rating": 8.8, "quantity": 20, "category": "Pizza" },
+
+  { "id": 34, "name": "Cheesy Spaghetti", "price": 12.20, "img": "/images/spaghetti-bolognese.jpg", "description": "Spaghetti mixed with rich melted cheese.", "rating": 8.7, "quantity": 12, "category": "Pasta" },
+  { "id": 35, "name": "Chicken Pasta Salad", "price": 12.50, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Cold pasta salad with chicken and veggies.", "rating": 8.4, "quantity": 14, "category": "Chicken" },
+  { "id": 36, "name": "Tomato Cheese Pizza", "price": 12.70, "img": "/images/Margherita-pizza.jpeg", "description": "Cheesy pizza topped with fresh tomatoes.", "rating": 8.9, "quantity": 18, "category": "Pizza" },
+
+  { "id": 37, "name": "Herb Spaghetti", "price": 11.30, "img": "/images/spaghetti-bolognese.jpg", "description": "Light pasta infused with aromatic herbs.", "rating": 8.0, "quantity": 15, "category": "Pasta" },
+  { "id": 38, "name": "Chicken Corn Salad", "price": 10.70, "img": "/images/Chicken-Caesar-salad.jpg", "description": "Sweet corn kernels mixed with grilled chicken.", "rating": 7.9, "quantity": 20, "category": "Chicken" },
+  { "id": 39, "name": "Italian Pizza", "price": 15.10, "img": "/images/Margherita-pizza.jpeg", "description": "Traditional Italian-style thin crust pizza.", "rating": 9.2, "quantity": 25, "category": "Pizza" },
+
+  { "id": 40, "name": "Vegetable Pasta", "price": 10.90, "img": "/images/spaghetti-bolognese.jpg", "description": "Pasta tossed with healthy seasonal vegetables.", "rating": 8.1, "quantity": 20, "category": "Pasta" }
+]
