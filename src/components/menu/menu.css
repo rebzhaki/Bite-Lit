@@ -18,7 +18,7 @@
 .menuItemCol{
         max-height: calc(100vh - 100px);
         overflow-y: auto;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
 
 }
 .menuItemCol::-webkit-scrollbar {
@@ -37,6 +37,9 @@
 .cartColMobile{
     display: none;
 }
+.filterCol{
+    text-align: right;
+}
 @media screen and (max-width: 768px) {
     .menuItemCard {
         margin-bottom: 20px;
@@ -51,5 +54,11 @@
         top: 20px;
         align-self: flex-start;
     }
+    .filterCol {
+        display: block !important;
+        text-align: left;
+      }
     
 }
+  
+  
