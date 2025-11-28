@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import data from "../../data/db.json";
 import { SearchContext } from "../../context/searchContext";
 import { CircleAlert } from "lucide-react";
+import PaginationContent from "../pagination/pagination";
 
 const MenuList = () => {
   const menuItems = data;
@@ -13,6 +14,10 @@ const MenuList = () => {
   const [addedItemsID, setIsAddedItemsID] = useState([]);
   const [cartCount, setCartCount] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const itemsPerPage = 12;
+
   const { searchQuery, category, updateCategory } = useContext(SearchContext);
 
   const filteredBySearch = menuItems.filter((item) =>
@@ -67,6 +72,21 @@ const MenuList = () => {
     }
   };
 
+  //Pagination logic
+
+  const totalPages = Math.ceil(newMenuData.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = newMenuData.slice(startIndex, startIndex + itemsPerPage);
+  newMenuData = currentItems;
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, category]);
+
   useEffect(() => {
     const storedCart = sessionStorage.getItem("cartItems");
     const storedCounts = sessionStorage.getItem("cartCount");
@@ -99,11 +119,7 @@ const MenuList = () => {
             <Col xs={6} md={9}>
               <h2 className="fw-bold">Menu</h2>
             </Col>
-            <Col
-              xs={6}
-              md={3}
-              className="filterCol"
-            >
+            <Col xs={6} md={3} className="filterCol">
               <Form.Select
                 aria-label="Filter by category"
                 value={category}
@@ -157,6 +173,11 @@ const MenuList = () => {
                 />
               </Col>
             ))}
+            <PaginationContent
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={handlePageChange}
+            />
           </Row>
         </Col>
         <Col md={3} className="cartCol">

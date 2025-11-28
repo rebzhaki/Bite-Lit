@@ -10,6 +10,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.shoppingCart{
+    background-color: #FFF3EA;
+     border-radius: 50%;
+}
 .shoppingCartIcon:hover{
     transform: scale(1.2);
     transition: transform 0.3s ease;
