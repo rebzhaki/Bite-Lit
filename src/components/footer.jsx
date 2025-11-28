@@ -3,7 +3,7 @@ import logo from "/bite-lite-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-light text-center text-lg-start mt-4">
+    <footer className="bg-light text-center text-lg-start">
       <Row>
         <Col className="text-center p-3" style={{ backgroundColor: "#FFF3EA" }}>
           <a

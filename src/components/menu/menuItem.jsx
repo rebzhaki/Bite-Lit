@@ -2,6 +2,8 @@ import { Plus } from "lucide-react";
 import { Card, Col, Row } from "react-bootstrap";
 import "./menu.css";
 import CartButtons from "../cart/cartButtons";
+import ProductModal from "../modal";
+import { useState } from "react";
 
 const MenuItem = ({
   item,
@@ -12,8 +14,13 @@ const MenuItem = ({
   onDecrement,
   onIncrement,
 }) => {
+  const [showModal, setShowModal] = useState(false);
+  const handleClick = (item) => {
+    setShowModal(true);
+  }
   return (
-    <Card className="mb-4 h-100 menuItemCard">
+    <>
+    <Card className="mb-4 h-100 menuItemCard" onClick={() => handleClick(item)}>
       <Card.Img
         variant="top"
         src={item.img}
@@ -54,6 +61,18 @@ const MenuItem = ({
         </Row>
       </Card.Body>
     </Card>
+    <ProductModal
+    show={showModal}
+    product={item}
+    handleClose={() => setShowModal(false)}
+    stock={stock}
+    isAddedToCart={isAddedToCart}
+    onAddToCart={onAddToCart}
+    quantity={quantity}
+    onDecrement={onDecrement}
+    onIncrement={onIncrement}
+  />
+  </>
   );
 };
 export default MenuItem;
