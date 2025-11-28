@@ -12,46 +12,30 @@ const Footer = () => {
             style={{ textDecoration: "none" }}
           >
             <Image
-          src={logo}
-          className="img-fluid"
-          style={{ maxWidth: "100px", height: "auto" }}
-          alt="BiteLite Logo"
-          roundedCircle
-       />
+              src={logo}
+              className="img-fluid"
+              style={{ maxWidth: "100px", height: "auto" }}
+              alt="BiteLite Logo"
+              roundedCircle
+            />
             BiteLite
           </a>
         </Col>
         <Col className="text-center p-3" style={{ backgroundColor: "#FFF3EA" }}>
-          <a
-            href=""
-            className="text-dark"
-            style={{ textDecoration: "none" }}
-          >
+          <a href="" className="text-dark" style={{ textDecoration: "none" }}>
             Terms of Service
           </a>
           <br />
-          <a
-            href=""
-            className="text-dark"
-            style={{ textDecoration: "none" }}
-          >
+          <a href="" className="text-dark" style={{ textDecoration: "none" }}>
             Privacy Policy
           </a>
         </Col>
         <Col className="text-center p-3" style={{ backgroundColor: "#FFF3EA" }}>
-          <a
-            href=""
-            className="text-dark"
-            style={{ textDecoration: "none" }}
-          >
+          <a href="" className="text-dark" style={{ textDecoration: "none" }}>
             Contact Us
           </a>
           <br />
-          <a
-            href=""
-            className="text-dark"
-            style={{ textDecoration: "none" }}
-          >
+          <a href="" className="text-dark" style={{ textDecoration: "none" }}>
             Support
           </a>
           <br />
@@ -62,14 +46,9 @@ const Footer = () => {
           >
             FAQ
           </a>
-
         </Col>
-
       </Row>
-      <div
-        className="text-center p-3"
-        style={{ backgroundColor: "#FFF3EA" }}
-      >
+      <div className="text-center p-3" style={{ backgroundColor: "#FFF3EA" }}>
         © {new Date().getFullYear()} BiteLite. All rights reserved.
       </div>
     </footer>

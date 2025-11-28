@@ -73,7 +73,6 @@ const MenuList = () => {
   };
 
   //Pagination logic
-
   const totalPages = Math.ceil(newMenuData.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentItems = newMenuData.slice(startIndex, startIndex + itemsPerPage);
