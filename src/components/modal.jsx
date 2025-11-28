@@ -1,4 +1,4 @@
-import { Button, Col, Image, Modal, Row } from "react-bootstrap";
+import { Col, Image, Modal, Row } from "react-bootstrap";
 import CartButtons from "./cart/cartButtons";
 import { Plus } from "lucide-react";
 
@@ -36,9 +36,10 @@ const ProductModal = ({ show, handleClose, product, isAddedToCart,
             ) : (
               <Plus
                 color="#F39850"
-                size={22}
-                className="shoppingCartIcon fw-bold"
+                size={28}
+                className="shoppingCart fw-bold"
                 onClick={onAddToCart}
+                style={{ backgroundColor: "#FFF3EA", borderRadius: "50%" }}
               />
             )}
             </Col>

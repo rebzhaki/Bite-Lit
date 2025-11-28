@@ -53,7 +53,7 @@ const MenuItem = ({
               <Plus
                 color="#F39850"
                 size={22}
-                className="shoppingCartIcon fw-bold"
+                className="shoppingCart fw-bold"
                 onClick={onAddToCart}
               />
             )}

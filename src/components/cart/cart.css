@@ -1,0 +1,31 @@
+.checkoutButton {
+  background-color: #F39850 !important;
+  border: none !important;
+}
+.card-body {
+   overflow-y: auto;
+   max-height: calc(100vh - 200px)
+}
+.cartDecrementButton{
+          background-color: white; 
+          border-radius: 50%; 
+          padding: 4px;
+          border: 1px solid #ddd;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+}
+.cartQuantityText{
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 25px;
+    text-align: center;
+}
+.cartIncrementButton{
+          border-radius: 50%; 
+          padding: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+}

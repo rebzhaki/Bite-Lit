@@ -1,6 +1,7 @@
 import { Button, Card } from "react-bootstrap";
 import CartItem from "./cartItem";
 import { useEffect } from "react";
+import "./cart.css";
 
 const Cart = ({ cartItems, quantities, onIncrement, onDecrement, isMobile }) => {
   const total = cartItems.reduce((sum, item) => {
@@ -16,12 +17,7 @@ const Cart = ({ cartItems, quantities, onIncrement, onDecrement, isMobile }) => 
       {!isMobile && (
         <Card className="p-1 pt-4 cartContainer shadow-sm">
         <h4 className="text-center fw-bold">Order Summary</h4>
-        <Card.Body
-          style={{
-            overflowY: "auto",
-            maxHeight: "calc(100vh - 200px)",
-          }}
-        >
+        <Card.Body>
           {cartItems.length === 0 ? (
             <p className="text-center">
               When you add items to the cart, they will appear here
@@ -40,8 +36,8 @@ const Cart = ({ cartItems, quantities, onIncrement, onDecrement, isMobile }) => 
         </Card.Body>
         <Card.Footer className="d-flex text-muted align-items-center justify-content-center">
           <Button
-            className="w-100 "
-            style={{ backgroundColor: "#F39850", border: "none" }}
+            className="w-100 checkoutButton"
+            
           >
             {cartItems.length > 0
               ? `Go To Checkout Ksh. ${total.toFixed(2)}`
@@ -55,8 +51,7 @@ const Cart = ({ cartItems, quantities, onIncrement, onDecrement, isMobile }) => 
       {isMobile && cartItems.length > 0 && (
         <div className="fixed-bottom p-3 bg-white border-top shadow-sm">
           <Button
-            className="w-100"
-            style={{ backgroundColor: "#F39850", border: "none" }}
+            className="w-100 checkoutButton"            
           >
             {`Go To Checkout Ksh. ${total.toFixed(2)}`}
           </Button>
